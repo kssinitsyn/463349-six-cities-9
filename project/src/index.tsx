@@ -6,6 +6,7 @@ type mainPropsType = {
   city: string,
   places: number,
   isLogin: boolean,
+  openSort: boolean,
   tabs:
     {
       name: string,
@@ -55,6 +56,7 @@ const mainProps: mainPropsType = {
     },
   ],
   isLogin: true,
+  openSort: true,
   placesList: [
     {
       id: 1,

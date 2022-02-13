@@ -5,6 +5,7 @@ import PlacesList from './PlacesList/PlacesList';
 type mainPropsType = {
   city: string,
   places: number,
+  openSort: boolean,
   placesList:
     {
       id: number,
@@ -19,12 +20,12 @@ type mainPropsType = {
     }[],
 };
 
-function Places({city, places, placesList}: mainPropsType) {
+function Places({city, places, placesList, openSort}: mainPropsType) {
   return (
     <React.Fragment>
       <h2 className="visually-hidden">Places</h2>
       <b className="places__found">{places} places to stay in {city}</b>
-      <PlacesSort />
+      <PlacesSort openSort={openSort}/>
       <PlacesList placesList={placesList}/>
     </React.Fragment>
   );

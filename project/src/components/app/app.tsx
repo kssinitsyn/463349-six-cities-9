@@ -4,6 +4,7 @@ import MainScreen from '../screens/MainScreen/MainScreen';
 type mainPropsType = {
   city: string,
   places: number,
+  openSort: boolean,
   tabs: {
     name: string,
     isActive: boolean

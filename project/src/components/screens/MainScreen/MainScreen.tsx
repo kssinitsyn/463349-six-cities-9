@@ -6,6 +6,7 @@ import Places from '../../Places/Places';
 type mainPropsType = {
   city: string,
   places: number,
+  openSort: boolean,
   tabs:
     {
       name: string,
@@ -39,6 +40,7 @@ function MainScreen(props: mainPropsType) {
               <Places city={props.city}
                 places={props.places}
                 placesList={props.placesList}
+                openSort={props.openSort}
               />
             </section>
             <div className="cities__right-section">
