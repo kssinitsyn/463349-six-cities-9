@@ -7,8 +7,6 @@ type mainPropsType = {
 };
 
 function Tabs({tabs}: mainPropsType) {
-  // eslint-disable-next-line no-console
-  console.log('tabs', {tabs});
   return (
     <div className="tabs">
       <div>
