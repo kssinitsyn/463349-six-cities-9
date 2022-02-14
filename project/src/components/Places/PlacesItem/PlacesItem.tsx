@@ -1,16 +1,16 @@
-// type itemDataType = {
-//   id: number,
-//   isFavorite: boolean,
-//   isPremium: boolean,
-//   previewImage: string,
-//   price: number,
-//   priceText: string,
-//   rating: number,
-//   title: string,
-//   type: string,
-// };
+type itemDataType = {
+  id: number,
+  isFavorite: boolean,
+  isPremium: boolean,
+  previewImage: string,
+  price: number,
+  priceText: string,
+  rating: number,
+  title: string,
+  type: string,
+};
 
-function PlacesItem({itemData}: any) {
+function PlacesItem({itemData}: {itemData:itemDataType}) {
   const premiumTagLayout = (
     <div className="place-card__mark">
       <span>Premium</span>
