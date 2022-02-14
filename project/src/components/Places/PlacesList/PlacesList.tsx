@@ -18,7 +18,8 @@ type mainPropsType = {
 function PlacesList({placesList}: mainPropsType) {
   return (
     <div className="cities__places-list places__list tabs__content">
-      {placesList.map((item) => <PlacesItem key={item.id} itemData={item}/>)}
+      {placesList.map((item) =>
+        <PlacesItem key={item.id} itemData={item}/>)}
     </div>
   );
 }

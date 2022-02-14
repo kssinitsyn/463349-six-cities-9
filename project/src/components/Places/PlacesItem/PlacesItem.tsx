@@ -1,10 +1,22 @@
+// type itemDataType = {
+//   id: number,
+//   isFavorite: boolean,
+//   isPremium: boolean,
+//   previewImage: string,
+//   price: number,
+//   priceText: string,
+//   rating: number,
+//   title: string,
+//   type: string,
+// };
+
 function PlacesItem({itemData}: any) {
-  // place-card__bookmark-button--active
   const premiumTagLayout = (
     <div className="place-card__mark">
       <span>Premium</span>
     </div>
   );
+
   return (
     <article className="cities__place-card place-card">
       {itemData.isPremium ? premiumTagLayout : null}
