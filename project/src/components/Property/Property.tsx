@@ -6,12 +6,9 @@ import PropertyInside from './PropertyInside/PropertyInside';
 import PropertyHost from './PropertyHost/PropertyHost';
 import PropertyRating from './PropertyRating/PropertyRating';
 import PropertyMap from './PropertyMap/PropertyMap';
+import {MainPropsType} from '../../types/MainPropsType';
 
-type PropertyProps = {
-  isLogin: boolean;
-}
-
-function Property({isLogin}: PropertyProps) {
+function Property({isLogin}: MainPropsType) {
   return (
     <section className="property">
       <div className="property__gallery-container container">

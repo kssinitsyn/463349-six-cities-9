@@ -1,18 +1,6 @@
-type itemDataType = {
-  itemData: {
-    id: number,
-    isFavorite: boolean,
-    isPremium: boolean,
-    previewImage: string,
-    price: number,
-    priceText: string,
-    rating: number,
-    title: string,
-    type: string,
-  }
-};
+import {PlaceListItem} from '../../../types/PlacesType';
 
-function PlacesItem({itemData}: itemDataType) {
+function PlacesItem({itemData}: PlaceListItem) {
   const premiumTagLayout = (
     <div className="place-card__mark">
       <span>Premium</span>

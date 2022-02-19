@@ -1,16 +1,10 @@
 import Header from '../../Header/Header';
 import Tabs from '../../Tabs/Tabs';
 import NoPlaces from '../../NoPlaces/NoPlaces';
+import {TabsType} from '../../../types/TabsType';
 
-type mainPropsType = {
-  tabs:
-    {
-      name: string,
-      isActive: boolean
-    }[]
-};
 
-function MainEmptyScreen(props: mainPropsType) {
+function MainEmptyScreen(props: TabsType) {
   return (
     <div className="page page--gray page--main">
       <Header isLogin/>

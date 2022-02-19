@@ -1,32 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
+import {MainPropsType} from './types/MainPropsType';
+import {PlacesType} from './types/PlacesType';
+import {TabsType} from './types/TabsType';
 
-type mainPropsType = {
-  city: string,
-  places: number,
-  isLogin: boolean,
-  openSort: boolean,
-  tabs:
-    {
-      name: string,
-      isActive: boolean
-    }[],
-  placesList:
-    {
-      id: number,
-      isFavorite: boolean,
-      isPremium: boolean,
-      previewImage: string,
-      price: number,
-      priceText: string,
-      rating: number,
-      title: string,
-      type: string,
-    }[],
-};
-
-const mainProps: mainPropsType = {
+const mainProps: MainPropsType & TabsType & PlacesType = {
   city: 'Amsterdam',
   places: 312,
   tabs: [
@@ -56,7 +35,6 @@ const mainProps: mainPropsType = {
     },
   ],
   isLogin: true,
-  openSort: true,
   placesList: [
     {
       id: 1,

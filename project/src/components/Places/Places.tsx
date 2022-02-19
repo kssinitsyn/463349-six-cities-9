@@ -1,31 +1,15 @@
 import React from 'react';
 import PlacesSort from './PlacesSort/PlacesSort';
 import PlacesList from './PlacesList/PlacesList';
+import {MainPropsType} from '../../types/MainPropsType';
+import {PlacesType} from '../../types/PlacesType';
 
-type mainPropsType = {
-  city: string,
-  places: number,
-  openSort: boolean,
-  placesList:
-    {
-      id: number,
-      isFavorite: boolean,
-      isPremium: boolean,
-      previewImage: string,
-      price: number,
-      priceText: string,
-      rating: number,
-      title: string,
-      type: string,
-    }[],
-};
-
-function Places({city, places, placesList, openSort}: mainPropsType) {
+function Places({city, places, placesList}: MainPropsType & PlacesType) {
   return (
     <React.Fragment>
       <h2 className="visually-hidden">Places</h2>
       <b className="places__found">{places} places to stay in {city}</b>
-      <PlacesSort openSort={openSort}/>
+      <PlacesSort />
       <PlacesList placesList={placesList}/>
     </React.Fragment>
   );

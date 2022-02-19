@@ -1,11 +1,8 @@
 import HeaderSignOut from './HeaderSignOut/HeaderSignOut';
 import HeaderSignIn from './HeaderSignIn/HeaderSignIn';
+import {MainPropsType} from '../../types/MainPropsType';
 
-type HeaderProps = {
-  isLogin: boolean;
-}
-
-function Header({isLogin}: HeaderProps) {
+function Header({isLogin}: MainPropsType) {
   return (
     <header className="header">
       <div className="container">

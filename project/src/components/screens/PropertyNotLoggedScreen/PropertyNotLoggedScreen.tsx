@@ -1,10 +1,11 @@
 import React from 'react';
 import Property from '../../Property/Property';
-// import PlacesList from '../../Places/PlacesList/PlacesList';
+import PlacesList from '../../Places/PlacesList/PlacesList';
 import Header from '../../Header/Header';
+import {PlacesType} from '../../../types/PlacesType';
 
 
-function PropertyNotLoggedScreen() {
+function PropertyNotLoggedScreen({placesList}: PlacesType) {
   return (
     <div className="page">
       <Header isLogin={false}/>
@@ -14,7 +15,7 @@ function PropertyNotLoggedScreen() {
         <div className="container">
           <section className="near-places places">
             <h2 className="near-places__title">Other places in the neighbourhood</h2>
-            {/*<PlacesList />*/}
+            <PlacesList placesList={placesList}/>
           </section>
         </div>
       </main>

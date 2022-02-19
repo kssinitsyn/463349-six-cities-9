@@ -2,32 +2,11 @@ import Header from '../../Header/Header';
 import Tabs from '../../Tabs/Tabs';
 import Map from '../../Map/Map';
 import Places from '../../Places/Places';
+import {MainPropsType} from '../../../types/MainPropsType';
+import {TabsType} from '../../../types/TabsType';
+import {PlacesType} from '../../../types/PlacesType';
 
-type mainPropsType = {
-  city: string,
-  places: number,
-  openSort: boolean,
-  tabs:
-    {
-      name: string,
-      isActive: boolean
-    }[],
-  isLogin: boolean,
-  placesList:
-    {
-      id: number,
-      isFavorite: boolean,
-      isPremium: boolean,
-      previewImage: string,
-      price: number,
-      priceText: string,
-      rating: number,
-      title: string,
-      type: string,
-    }[],
-};
-
-function MainScreen(props: mainPropsType) {
+function MainScreen(props: MainPropsType & TabsType & PlacesType) {
   return (
     <div className="page page--gray page--main">
       <Header isLogin={props.isLogin}/>
@@ -40,7 +19,6 @@ function MainScreen(props: mainPropsType) {
               <Places city={props.city}
                 places={props.places}
                 placesList={props.placesList}
-                openSort={props.openSort}
               />
             </section>
             <div className="cities__right-section">

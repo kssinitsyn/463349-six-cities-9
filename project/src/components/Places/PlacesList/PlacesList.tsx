@@ -1,21 +1,7 @@
 import PlacesItem from '../PlacesItem/PlacesItem';
+import {PlacesType} from '../../../types/PlacesType';
 
-type mainPropsType = {
-  placesList:
-    {
-      id: number,
-      isFavorite: boolean,
-      isPremium: boolean,
-      previewImage: string,
-      price: number,
-      priceText: string,
-      rating: number,
-      title: string,
-      type: string,
-    }[],
-};
-
-function PlacesList({placesList}: mainPropsType) {
+function PlacesList({placesList}: PlacesType) {
   return (
     <div className="cities__places-list places__list tabs__content">
       {placesList.map((item) =>

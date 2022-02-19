@@ -1,12 +1,9 @@
 import React from 'react';
 import ReviewsForm from './ReviewsForm/ReviewsForm';
 import ReviewsList from './ReviewsList/ReviewsList';
+import {MainPropsType} from '../../types/MainPropsType';
 
-type ReviewsProps = {
-  isLogin: boolean;
-}
-
-function Reviews({isLogin}: ReviewsProps) {
+function Reviews({isLogin}: MainPropsType) {
   return (
     <section className="property__reviews reviews">
       <h2 className="reviews__title">Reviews &middot; <span className="reviews__amount">1</span></h2>
