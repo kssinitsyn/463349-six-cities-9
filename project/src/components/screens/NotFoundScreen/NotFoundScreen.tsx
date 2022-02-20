@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import './NotFoundScreenStyle.css';
 
 import Header from '../../Header/Header';
 import Footer from '../../Footer/Footer';
