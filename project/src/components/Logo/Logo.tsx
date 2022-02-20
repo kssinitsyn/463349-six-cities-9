@@ -5,8 +5,6 @@ import LogoFooter from './LogoFooter/LogoFooter';
 import {LogoType} from '../../types/LogoType';
 
 function Logo(props: LogoType) {
-  // eslint-disable-next-line no-console
-  console.log(props);
   return (
     <Fragment>
       {/* eslint-disable-next-line no-nested-ternary */}

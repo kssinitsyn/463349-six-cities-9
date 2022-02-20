@@ -4,13 +4,13 @@ import MainScreen from '../screens/MainScreen/MainScreen';
 import FavoritesScreen from '../screens/FavoritesScreen/FavoritesScreen';
 import PropertyScreen from '../screens/PropertyScreen/PropertyScreen';
 
-import {AppRoute} from '../../types/AppRoute';
-
 import {MainPropsType} from '../../types/MainPropsType';
 import {TabsType} from '../../types/TabsType';
 import {PlacesType} from '../../types/PlacesType';
+import {AppRoute} from '../../types/AppRoute';
 import LoginScreen from '../screens/LoginScreen/LoginScreen';
 import NotFoundScreen from '../screens/NotFoundScreen/NotFoundScreen';
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
 
 function App(props: MainPropsType & TabsType & PlacesType): JSX.Element {
   return (
@@ -22,7 +22,13 @@ function App(props: MainPropsType & TabsType & PlacesType): JSX.Element {
         />
         <Route
           path={AppRoute.Favorites}
-          element={<FavoritesScreen />}
+          element={
+            <PrivateRoute
+              isLogin={props.isLogin}
+            >
+              <FavoritesScreen />
+            </PrivateRoute>
+          }
         />
         <Route
           path={AppRoute.Offer}
