@@ -1,0 +1,35 @@
+.page__not-found {
+  display: grid;
+  place-content: center;
+}
+
+.not-found__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 10rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.not-found__subtitle {
+  margin: 0;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.not-found__link {
+  margin: 1rem;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: #4481c3
+}
