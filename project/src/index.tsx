@@ -34,7 +34,7 @@ const mainProps: MainPropsType & TabsType & PlacesType = {
       isActive: false,
     },
   ],
-  isLogin: true,
+  isLogin: false,
   placesList: [
     {
       id: 1,

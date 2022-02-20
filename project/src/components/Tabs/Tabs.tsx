@@ -1,12 +1,8 @@
-type mainPropsType = {
-  tabs:
-    {
-      name: string,
-      isActive: boolean
-    }[]
-};
+import {Link} from 'react-router-dom';
 
-function Tabs({tabs}: mainPropsType) {
+import {TabsType} from '../../types/TabsType';
+
+function Tabs({tabs}: TabsType) {
   return (
     <div className="tabs">
       <div>
@@ -15,9 +11,9 @@ function Tabs({tabs}: mainPropsType) {
         <ul className="locations__list tabs__list">
           {tabs.map((item) => (
             <li className="locations__item" key={item.name}>
-              <a className={`locations__item-link tabs__item ${item.isActive ? 'tabs__item--active' : ''}`} href="#">
+              <Link className={`locations__item-link tabs__item ${item.isActive ? 'tabs__item--active' : ''}`} to={'/'}>
                 <span>{item.name}</span>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
