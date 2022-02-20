@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import {PlaceListItem} from '../../../types/PlacesType';
 
 function PlacesItem({itemData}: PlaceListItem) {
@@ -11,11 +12,11 @@ function PlacesItem({itemData}: PlaceListItem) {
     <article className="cities__place-card place-card">
       {itemData.isPremium ? premiumTagLayout : null}
       <div className="cities__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={'/'}>
           <img className="place-card__image" src={itemData.previewImage} width="260" height="200"
             alt="Place image"
           />
-        </a>
+        </Link>
       </div>
       <div className="place-card__info">
         <div className="place-card__price-wrapper">
@@ -37,7 +38,7 @@ function PlacesItem({itemData}: PlaceListItem) {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{itemData.title}</a>
+          <Link to={'/'}>{itemData.title}</Link>
         </h2>
         <p className="place-card__type">{itemData.type}</p>
       </div>
