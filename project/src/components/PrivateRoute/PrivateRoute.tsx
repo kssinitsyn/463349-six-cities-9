@@ -3,15 +3,15 @@ import {MainPropsType} from '../../types/MainPropsType';
 import {AppRoute} from '../../types/AppRoute';
 
 type PrivateRouteProps = MainPropsType & {
-  children: JSX.Element;
+  component: JSX.Element
 }
 
 function PrivateRoute(props: PrivateRouteProps): JSX.Element {
-  const {isLogin, children} = props;
+  const {isLogin, component} = props;
 
   return (
     isLogin
-      ? children
+      ? component
       : <Navigate to={AppRoute.Login} />
   );
 }

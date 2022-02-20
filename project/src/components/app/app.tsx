@@ -25,9 +25,8 @@ function App(props: MainPropsType & TabsType & PlacesType): JSX.Element {
           element={
             <PrivateRoute
               isLogin={props.isLogin}
-            >
-              <FavoritesScreen />
-            </PrivateRoute>
+              component={<FavoritesScreen />}
+            />
           }
         />
         <Route
