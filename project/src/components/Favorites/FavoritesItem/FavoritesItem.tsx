@@ -1,7 +1,8 @@
 import {Link} from 'react-router-dom';
 import FavoritesPlaceCard from '../FavoritesPlaceCard/FavoritesPlaceCard';
+import {FavoritesType} from '../../../types/FavoritesType';
 
-function FavoritesItem() {
+function FavoritesItem({favoritesList}: FavoritesType) {
   return (
     <li className="favorites__locations-items">
       <div className="favorites__locations locations locations--current">
@@ -12,7 +13,9 @@ function FavoritesItem() {
         </div>
       </div>
       <div className="favorites__places">
-        <FavoritesPlaceCard />
+        {favoritesList.map((item) =>
+          <FavoritesPlaceCard key={item.id} itemData={item}/>,
+        )}
       </div>
     </li>
   );

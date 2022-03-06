@@ -1,9 +1,10 @@
 import FavoritesItem from '../FavoritesItem/FavoritesItem';
+import {FavoritesType} from '../../../types/FavoritesType';
 
-function FavoritesList() {
+function FavoritesList({favoritesList}: FavoritesType) {
   return (
     <ul className="favorites__list">
-      <FavoritesItem />
+      <FavoritesItem favoritesList={favoritesList}/>,
     </ul>
   );
 }

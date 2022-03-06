@@ -11,8 +11,9 @@ import {AppRoute} from '../../types/AppRoute';
 import LoginScreen from '../screens/LoginScreen/LoginScreen';
 import NotFoundScreen from '../screens/NotFoundScreen/NotFoundScreen';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import {FavoritesType} from '../../types/FavoritesType';
 
-function App(props: MainPropsType & TabsType & PlacesType): JSX.Element {
+function App(props: MainPropsType & TabsType & PlacesType & FavoritesType): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>
@@ -25,7 +26,7 @@ function App(props: MainPropsType & TabsType & PlacesType): JSX.Element {
           element={
             <PrivateRoute
               isLogin={props.isLogin}
-              component={<FavoritesScreen />}
+              component={<FavoritesScreen favoritesList={props.favoritesList}/>}
             />
           }
         />
