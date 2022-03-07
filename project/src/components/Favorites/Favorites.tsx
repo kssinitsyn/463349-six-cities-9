@@ -1,10 +1,11 @@
 import FavoritesList from './FavoritesList/FavoritesList';
+import {FavoritesType} from '../../types/FavoritesType';
 
-function Favorites() {
+function Favorites({favoritesList}: FavoritesType) {
   return (
     <section className="favorites">
       <h1 className="favorites__title">Saved listing</h1>
-      <FavoritesList />
+      <FavoritesList favoritesList={favoritesList}/>
     </section>
   );
 }

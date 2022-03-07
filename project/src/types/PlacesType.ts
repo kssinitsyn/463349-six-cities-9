@@ -13,6 +13,7 @@ type PlacesType = {
 };
 
 type PlaceListItem = {
+  changeActiveCardHandler: () => void,
   itemData: {
     id: number,
     isFavorite: boolean,

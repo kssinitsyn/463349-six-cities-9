@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/app/app';
 import {MainPropsType} from './types/MainPropsType';
-import {PlacesType} from './types/PlacesType';
 import {TabsType} from './types/TabsType';
+import {PlacesType} from './types/PlacesType';
 
-const mainProps: MainPropsType & TabsType & PlacesType = {
+import {PlaceList} from './mocks/offers';
+import {FavoritesList} from './mocks/favorites';
+import {FavoritesType} from './types/FavoritesType';
+
+const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType = {
   city: 'Amsterdam',
   places: 312,
   tabs: [
@@ -34,64 +38,9 @@ const mainProps: MainPropsType & TabsType & PlacesType = {
       isActive: false,
     },
   ],
-  isLogin: false,
-  placesList: [
-    {
-      id: 1,
-      isFavorite: true,
-      isPremium: true,
-      previewImage: 'img/apartment-01.jpg',
-      price: 120,
-      priceText: 'night',
-      rating: 1.5,
-      title: 'Beautiful & luxurious studio at great location',
-      type: 'apartment',
-    },
-    {
-      id: 2,
-      isFavorite: false,
-      isPremium: false,
-      previewImage: 'img/room.jpg',
-      price: 80,
-      priceText: 'night',
-      rating: 4.4,
-      title: 'Wood and stone place',
-      type: 'Private room',
-    },
-    {
-      id: 3,
-      isFavorite: false,
-      isPremium: false,
-      previewImage: 'img/apartment-02.jpg',
-      price: 132,
-      priceText: 'night',
-      rating: 2.1,
-      title: 'Canal View Prinsengracht',
-      type: 'apartment',
-    },
-    {
-      id: 4,
-      isFavorite: true,
-      isPremium: true,
-      previewImage: 'img/apartment-03.jpg',
-      price: 180,
-      priceText: 'night',
-      rating: 5,
-      title: 'Nice, cozy, warm big bed apartment',
-      type: 'Apartment',
-    },
-    {
-      id: 5,
-      isFavorite: false,
-      isPremium: false,
-      previewImage: 'img/room.jpg',
-      price: 80,
-      priceText: 'night',
-      rating: 3.6,
-      title: 'Wood and stone place',
-      type: 'Private room',
-    },
-  ],
+  isLogin: true,
+  ...PlaceList,
+  ...FavoritesList,
 };
 
 ReactDOM.render(

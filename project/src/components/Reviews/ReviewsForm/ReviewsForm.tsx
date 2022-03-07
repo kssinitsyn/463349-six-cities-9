@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function ReviewsForm() {
+  const reviewsData = {
+    ratingValue: 0,
+    commentValue:'',
+  };
+
+  const [, setRatingValue] = useState(reviewsData.ratingValue);
+  const [, setCommentValue] = useState(reviewsData.commentValue);
+
+  const ratingChangeHandler: React.ChangeEventHandler<HTMLInputElement> = (evt) => {
+    const valueTargetElement = Number(evt.target.value);
+    setRatingValue(valueTargetElement);
+  };
+
+  const commentChangeHandler: React.ChangeEventHandler<HTMLTextAreaElement> = (evt) => {
+    const valueTargetElement = evt.target.value;
+    setCommentValue(valueTargetElement);
+  };
+
+  const formSubmitHandler: React.FormEventHandler<HTMLFormElement> = (evt) => {
+    // Заглушка
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+    evt.preventDefault;
+  };
+
   return (
-    <form className="reviews__form form" action="#" method="post">
+    <form className="reviews__form form" action="#" method="post" onChange={formSubmitHandler}>
       <label className="reviews__label form__label" htmlFor="review">Your review</label>
-      <div className="reviews__rating-form form__rating">
+      <div className="reviews__rating-form form__rating" onChange={ratingChangeHandler}>
         <input className="form__rating-input visually-hidden" name="rating" value="5" id="5-stars"
           type="radio"
         />
@@ -54,6 +78,7 @@ function ReviewsForm() {
       </div>
       <textarea className="reviews__textarea form__textarea" id="review" name="review"
         placeholder="Tell how was your stay, what you like and what can be improved"
+        onChange={commentChangeHandler}
       >
       </textarea>
       <div className="reviews__button-wrapper">
