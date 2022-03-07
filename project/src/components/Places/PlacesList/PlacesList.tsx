@@ -3,7 +3,7 @@ import {PlacesType} from '../../../types/PlacesType';
 import { useState } from 'react';
 
 function PlacesList({placesList}: PlacesType) {
-  const [activeCardId, setActiveCardId] = useState(null as null | number);
+  const [activeCardId, setActiveCardId] = useState<null | number>(null);
   const handlerChangeActiveCard = (id: number) => () => {
     setActiveCardId(id);
   };

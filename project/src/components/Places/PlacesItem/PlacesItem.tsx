@@ -1,18 +1,13 @@
 import {Link} from 'react-router-dom';
 import {PlaceListItem} from '../../../types/PlacesType';
+import { PremiumTagLayout } from '../../PremiumTagLayout/PremiumTagLayout';
 
 function PlacesItem(props: PlaceListItem) {
   const {changeActiveCardHandler} = props;
 
-  const premiumTagLayout = (
-    <div className="place-card__mark">
-      <span>Premium</span>
-    </div>
-  );
-
   return (
     <article className="cities__place-card place-card" onMouseEnter={changeActiveCardHandler}>
-      {props.itemData.isPremium ? premiumTagLayout : null}
+      {props.itemData.isPremium && <PremiumTagLayout />}
       <div className="cities__image-wrapper place-card__image-wrapper">
         <Link to={`offer/${props.itemData.id}`}>
           <img className="place-card__image" src={props.itemData.previewImage} width="260" height="200" alt="Place image"/>
