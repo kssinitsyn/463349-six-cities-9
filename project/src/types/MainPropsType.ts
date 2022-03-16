@@ -1,5 +1,6 @@
+
 export type MainPropsType = {
-  city?: string,
+  cityName?: string,
   places?: number,
-  isLogin?: boolean
+  isLogin?: boolean,
 };

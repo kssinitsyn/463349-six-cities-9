@@ -5,8 +5,9 @@ import Places from '../../Places/Places';
 import {MainPropsType} from '../../../types/MainPropsType';
 import {TabsType} from '../../../types/TabsType';
 import {PlacesType} from '../../../types/PlacesType';
+import { OfferListType } from '../../../types/OfferType';
 
-function MainScreen(props: MainPropsType & TabsType & PlacesType) {
+function MainScreen(props: MainPropsType & TabsType & PlacesType & OfferListType) {
   return (
     <div className="page page--gray page--main">
       <Header isLogin={props.isLogin}/>
@@ -16,13 +17,13 @@ function MainScreen(props: MainPropsType & TabsType & PlacesType) {
         <div className="cities">
           <div className="cities__places-container container">
             <section className="cities__places places">
-              <Places city={props.city}
+              <Places cityName={props.cityName}
                 places={props.places}
                 placesList={props.placesList}
               />
             </section>
             <div className="cities__right-section">
-              <Map />
+              <Map offers={props.offers}/>
             </div>
           </div>
         </div>

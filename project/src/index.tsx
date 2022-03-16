@@ -5,12 +5,14 @@ import {MainPropsType} from './types/MainPropsType';
 import {TabsType} from './types/TabsType';
 import {PlacesType} from './types/PlacesType';
 
-import {PlaceList} from './mocks/offers';
+import {PlaceList} from './mocks/placeCard';
 import {FavoritesList} from './mocks/favorites';
 import {FavoritesType} from './types/FavoritesType';
+import { OfferList } from './mocks/offers';
+import { OfferListType } from './types/OfferType';
 
-const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType = {
-  city: 'Amsterdam',
+const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType & OfferListType = {
+  cityName: 'Amsterdam',
   places: 312,
   tabs: [
     {
@@ -41,6 +43,7 @@ const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType = {
   isLogin: true,
   ...PlaceList,
   ...FavoritesList,
+  offers: [...OfferList],
 };
 
 ReactDOM.render(
