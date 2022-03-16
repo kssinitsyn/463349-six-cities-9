@@ -6,15 +6,14 @@ import PropertyScreen from '../screens/PropertyScreen/PropertyScreen';
 
 import {MainPropsType} from '../../types/MainPropsType';
 import {TabsType} from '../../types/TabsType';
-import {PlacesType} from '../../types/PlacesType';
 import {AppRoute} from '../../types/AppRoute';
 import LoginScreen from '../screens/LoginScreen/LoginScreen';
 import NotFoundScreen from '../screens/NotFoundScreen/NotFoundScreen';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import {FavoritesType} from '../../types/FavoritesType';
-import { OfferListType } from '../../types/OfferType';
+import { OfferListType, PlaceListType } from '../../types/OfferType';
 
-function App(props: MainPropsType & TabsType & PlacesType & FavoritesType & OfferListType): JSX.Element {
+function App(props: MainPropsType & TabsType & FavoritesType & OfferListType & PlaceListType): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>

@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './components/app/app';
 import {MainPropsType} from './types/MainPropsType';
 import {TabsType} from './types/TabsType';
-import {PlacesType} from './types/PlacesType';
 
 import {PlaceList} from './mocks/placeCard';
 import {FavoritesList} from './mocks/favorites';
 import {FavoritesType} from './types/FavoritesType';
 import { OfferList } from './mocks/offers';
-import { OfferListType } from './types/OfferType';
+import { OfferListType, PlaceListType } from './types/OfferType';
 
-const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType & OfferListType = {
+const mainProps: MainPropsType & TabsType & FavoritesType & PlaceListType & OfferListType = {
   cityName: 'Amsterdam',
   places: 312,
   tabs: [
@@ -41,7 +40,7 @@ const mainProps: MainPropsType & TabsType & PlacesType & FavoritesType & OfferLi
     },
   ],
   isLogin: true,
-  ...PlaceList,
+  placesList: [...PlaceList],
   ...FavoritesList,
   offers: [...OfferList],
 };

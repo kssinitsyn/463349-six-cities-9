@@ -1,8 +1,8 @@
 import PlacesItem from '../PlacesItem/PlacesItem';
-import {PlacesType} from '../../../types/PlacesType';
 import { useState } from 'react';
+import { PlaceListType } from '../../../types/OfferType';
 
-function PlacesList({placesList}: PlacesType) {
+function PlacesList({placesList}: PlaceListType) {
   const [activeCardId, setActiveCardId] = useState<null | number>(null);
   const handlerChangeActiveCard = (id: number) => () => {
     setActiveCardId(id);

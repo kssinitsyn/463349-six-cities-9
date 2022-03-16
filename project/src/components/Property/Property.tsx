@@ -7,8 +7,9 @@ import PropertyHost from './PropertyHost/PropertyHost';
 import PropertyRating from './PropertyRating/PropertyRating';
 import PropertyMap from './PropertyMap/PropertyMap';
 import {MainPropsType} from '../../types/MainPropsType';
+import { OfferListType } from '../../types/OfferType';
 
-function Property({isLogin}: MainPropsType) {
+function Property({isLogin, offers}: MainPropsType & OfferListType) {
   return (
     <section className="property">
       <div className="property__gallery-container container">
@@ -41,7 +42,10 @@ function Property({isLogin}: MainPropsType) {
           <Reviews isLogin={isLogin}/>
         </div>
       </div>
-      <PropertyMap />
+      <div className='property__map'>
+        <PropertyMap offers={offers}/>
+      </div>
+
     </section>
   );
 }

@@ -2,9 +2,9 @@ import React from 'react';
 import PlacesSort from './PlacesSort/PlacesSort';
 import PlacesList from './PlacesList/PlacesList';
 import {MainPropsType} from '../../types/MainPropsType';
-import {PlacesType} from '../../types/PlacesType';
+import { PlaceListType } from '../../types/OfferType';
 
-function Places({cityName, places, placesList}: MainPropsType & PlacesType) {
+function Places({cityName, places, placesList}: MainPropsType & PlaceListType) {
   return (
     <React.Fragment>
       <h2 className="visually-hidden">Places</h2>

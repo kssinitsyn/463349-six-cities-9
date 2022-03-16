@@ -1,8 +1,10 @@
 import React from 'react';
+import Map from '../../Map/Map';
+import { OfferListType } from '../../../types/OfferType';
 
-function PropertyMap() {
+function PropertyMap({offers}: OfferListType) {
   return (
-    <section className="property__map map"></section>
+    <Map offers={offers}/>
   );
 }
 

@@ -4,10 +4,12 @@ import Map from '../../Map/Map';
 import Places from '../../Places/Places';
 import {MainPropsType} from '../../../types/MainPropsType';
 import {TabsType} from '../../../types/TabsType';
-import {PlacesType} from '../../../types/PlacesType';
-import { OfferListType } from '../../../types/OfferType';
+import { OfferListType, PlaceListType } from '../../../types/OfferType';
 
-function MainScreen(props: MainPropsType & TabsType & PlacesType & OfferListType) {
+function MainScreen(props: MainPropsType & TabsType & PlaceListType & OfferListType) {
+  // eslint-disable-next-line no-console
+  console.log('props', props);
+
   return (
     <div className="page page--gray page--main">
       <Header isLogin={props.isLogin}/>
@@ -23,7 +25,9 @@ function MainScreen(props: MainPropsType & TabsType & PlacesType & OfferListType
               />
             </section>
             <div className="cities__right-section">
-              <Map offers={props.offers}/>
+              <div className='cities__map'>
+                <Map offers={props.offers}/>
+              </div>
             </div>
           </div>
         </div>

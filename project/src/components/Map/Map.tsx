@@ -32,7 +32,7 @@ function Map({offers}: OfferListType) {
     );
   }, [map, offers]);
 
-  return <section className="cities__map map" style={{height: '100%'}} ref={mapRef}></section>;
+  return <section className="map" style={{height: '100%'}} ref={mapRef}></section>;
 }
 
 export default Map;

@@ -1,6 +1,10 @@
 export type OfferListType = & {
   offers: OfferType[]
 }
+export type PlaceListType = & {
+  placesList: OfferType[]
+}
+
 
 export type OfferType = {
     bedrooms: number
