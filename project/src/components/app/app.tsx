@@ -12,8 +12,9 @@ import NotFoundScreen from '../screens/NotFoundScreen/NotFoundScreen';
 import PrivateRoute from '../PrivateRoute/PrivateRoute';
 import {FavoritesType} from '../../types/FavoritesType';
 import { OfferListType, PlaceListType } from '../../types/OfferType';
+import { ReviewsListType } from '../../types/ReviewsType';
 
-function App(props: MainPropsType & TabsType & FavoritesType & OfferListType & PlaceListType): JSX.Element {
+function App(props: MainPropsType & TabsType & FavoritesType & OfferListType & PlaceListType & ReviewsListType): JSX.Element {
   return (
     <BrowserRouter>
       <Routes>

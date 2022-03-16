@@ -1,9 +1,10 @@
+import { ReviewsListType } from '../../../types/ReviewsType';
 import ReviewsItem from '../ReviewsItem/ReviewsItem';
 
-function ReviewsList() {
+function ReviewsList({reviews}: ReviewsListType) {
   return (
     <ul className="reviews__list">
-      <ReviewsItem />
+      {reviews.map((item) => <ReviewsItem key={item.id} itemData={item}/>)}
     </ul>
   );
 }

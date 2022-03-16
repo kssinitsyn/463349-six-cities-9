@@ -9,8 +9,10 @@ import {FavoritesList} from './mocks/favorites';
 import {FavoritesType} from './types/FavoritesType';
 import { OfferList } from './mocks/offers';
 import { OfferListType, PlaceListType } from './types/OfferType';
+import { reviews } from './mocks/reviews';
+import { ReviewsListType } from './types/ReviewsType';
 
-const mainProps: MainPropsType & TabsType & FavoritesType & PlaceListType & OfferListType = {
+const mainProps: MainPropsType & TabsType & FavoritesType & PlaceListType & OfferListType & ReviewsListType = {
   cityName: 'Amsterdam',
   places: 312,
   tabs: [
@@ -43,6 +45,7 @@ const mainProps: MainPropsType & TabsType & FavoritesType & PlaceListType & Offe
   placesList: [...PlaceList],
   ...FavoritesList,
   offers: [...OfferList],
+  reviews: [...reviews],
 };
 
 ReactDOM.render(
